@@ -3,7 +3,7 @@ package src;
 public class Main{
     public static void main(String[] args) {
         int[] array = {3, 2, 4, 1};
-       /*calculating time complexity*/
+       /*calculating time complexity,*/
         double startTime = System.nanoTime();
         double avgValue = findAverage(array);
         double endTime = System.nanoTime();
