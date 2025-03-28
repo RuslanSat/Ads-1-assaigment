@@ -1,25 +1,23 @@
 package src;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
-        int[] array = {10, 1, 32, 3, 45};
-        /*calculating time complexity*/
+        int[] array = {3, 2, 4, 1};
+       /*calculating time complexity*/
         double startTime = System.nanoTime();
-        int minValue = findMin(array);
+        double avgValue = findAverage(array);
         double endTime = System.nanoTime();
 
-        System.out.println("Minimum value: " + minValue);
+        System.out.println("Average value: " + avgValue);
         System.out.println("Time taken: " + (endTime - startTime) / 1_000_000.0 + " ms");
     }
 
-    /* function to calculate min element in array. */
-    public static int findMin(int[] arr) {
-        int min = arr[0];
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-            }
+    /* Calculates the average of elements in an array.*/
+    public static double findAverage(int[] arr) {
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
         }
-        return min;
+        return (double) sum / arr.length;
     }
 }
